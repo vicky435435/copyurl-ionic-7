@@ -1,0 +1,7 @@
+{
+  "name": "copyurl",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
