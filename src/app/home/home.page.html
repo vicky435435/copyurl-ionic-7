@@ -1,20 +1,52 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="center-text">Copy URL</ion-card-title>
+      <ion-card-subtitle class="center-text">Your current URL</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-label position="floating" color="primary">URL</ion-label>
+        <ion-input [(ngModel)]="currentUrl" readonly></ion-input>
+        <ion-icon name="link-outline" slot="end" color="primary"></ion-icon>
+      </ion-item>
+      <ion-button expand="block" (click)="copyUrl()" color="primary">
+        <ion-icon slot="start" name="copy-outline"></ion-icon>
+        Copy URL
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<!--
+<ion-content class="ion-padding tic-tac-toe-content">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="center-text">Tic-Tac-Toe</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="board">
+        <div class="row" *ngFor="let row of board; let rowIndex = index">
+          <div
+            class="cell"
+            *ngFor="let cell of row; let colIndex = index"
+            (click)="makeMove(rowIndex, colIndex)"
+            [ngClass]="{'x': cell === 'X', 'o': cell === 'O'}">
+            {{ cell }}
+          </div>
+        </div>
+      </div>
+      <ion-button expand="full" (click)="resetGame()" color="primary">
+        Reset Game
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-toast [isOpen]="toastOpen" [message]="toastMessage" duration="2000" position="bottom"></ion-toast>
+</ion-content> -->
+
+
+
+
